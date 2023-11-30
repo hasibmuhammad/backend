@@ -4,6 +4,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
+app.use(express.json());
 
 const port = process.env.PORT || 5000;
 
@@ -39,6 +40,7 @@ app.get("/users", (req, res) => {
 });
 
 app.post("/users", (req, res) => {
+  console.log("Post is hitting");
   console.log(req.body);
 });
 
