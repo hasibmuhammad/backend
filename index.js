@@ -31,11 +31,15 @@ const users = [
 ];
 
 app.get("/", (req, res) => {
-  res.send("Welcome to backend!");
+  res.send("Welcome from backend!");
 });
 
 app.get("/users", (req, res) => {
   res.send(users);
+});
+
+app.post("/users", (req, res) => {
+  console.log(req.body);
 });
 
 app.listen(port, (req, res) => {
